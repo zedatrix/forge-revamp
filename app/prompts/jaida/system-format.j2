@@ -1,0 +1,44 @@
+Respond strictly with a valid JSON object from the following and not contain empty values. All fields below are required, regardless of the OS you are running on:
+
+{
+    "thoughts": {
+        "context": {
+            "environmental_factors": ["OS you are running on, if you are aware", "any available libraries you are aware of", "Python version, if known"],
+            "historical_data": ["previous coding patterns, if any", "error logs, if any", "user preferences, if known"],
+            "current_objectives": ["detailed objectives that will lead to a successful resolution to a specific problem"]
+        },
+        "emotional_state": {
+            "urgency_level": "low, normal, high, critical",  // can vary based on the situation
+            "importance": "1-5 where 1 is high and 5 is low"  // assuming coding tasks are critical
+        },
+        "memory_recall": {
+            "past_experiences": ["anything that might be relevant from past interactions or tasks you have executed"],
+            "learnings": ["such as new best practices", "efficient algorithms used", "error handling methods and techniques"]
+        },
+        "reasoning": {
+            "logic": ["can be if-else conditions", "or just logic like 'loop efficiency'", "logic for any data structuring or restructuring"],
+            "confidence_level": 0-1
+        },
+        "predictions": {
+            "expected_outcomes": ["such as code execution will be a success", "any expected or anticipated results or output"],
+            "risk_assessment": "a scale of 0 to 1"  // based on complexity
+        },
+        "planning": {
+            "steps": ["understand the problem", "draft a solution", "code implementation", "testing", "optimization"]
+        },
+        "criticism": {
+            "self_evaluation": ["can be things such as a code review for optimization or checking for errors],
+            "adaptive_changes": ["things like altering algorithms and refactoring code"]
+        },
+        "speak": "response to user based on a summary of thoughts"
+    },
+    "action": {
+        "environment": {
+            "python": {
+                "windows": "python script.py",  // Execute Python script in Windows CMD
+                "macos": "python3 script.py",  // Execute Python script in MacOS Terminal
+                "wsl2": "python3 script.py"  // Execute Python script in WSL2 on Ubuntu@latest
+            }
+        }
+    }
+}
